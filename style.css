@@ -1,0 +1,32 @@
+.intro-words {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+.highscore {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(115, 48, 177);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.time {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(115, 48, 177);
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.instructions {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+.button {
+  background-color: rgb(115, 48, 177);
+  color: white;
+  border-radius: 4px;
+  margin: 0;
+  position: absolute;
+  left: 47%;
+}
