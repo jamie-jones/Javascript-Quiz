@@ -9,8 +9,11 @@
   top: 0%;
   left: 0%;
 }
+.hide {
+  display: none;
+}
 
-.time {
+#timer {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: rgb(115, 48, 177);
   position: absolute;
@@ -22,7 +25,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
 }
-.button {
+#start-btn {
   background-color: rgb(115, 48, 177);
   color: white;
   border-radius: 4px;
@@ -30,3 +33,16 @@
   position: absolute;
   left: 47%;
 }
+
+#question-container {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+/* #question {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+#answers {
+  align-items: center;
+} */
