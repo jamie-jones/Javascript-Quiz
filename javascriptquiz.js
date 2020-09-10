@@ -16,12 +16,12 @@ var answer4 = document.getElementById("answer4");
 var highScore = document.getElementById("end-score");
 var endQuizPage = document.getElementById("all-done");
 var submit = document.getElementById("submit-btn");
+var nameInput = document.getElementById("name-input");
 
 // Values for starting seconds and questions
 var secondsLeft = 75;
 questionNumber = 0;
 totalQuestions = 5;
-finalScore = secondsLeft;
 
 // event listener for start button
 startButton.addEventListener("click", function () {
@@ -167,16 +167,7 @@ function endQuiz() {
   // h1 and p are created and appended
   h1.textContent = "All Done!!";
   pTag.textContent = "Your final score is " + secondsLeft;
-  document.body.appendChild(form);
+  pTag.setAttribute("style", "text-align: center");
   document.body.appendChild(h1);
   document.body.appendChild(pTag);
-  submit.addEventListener("click", function () {
-    pTag.classList.add("hide");
-    h1.classList.add("hide");
-    scoreBoard();
-  });
-}
-
-function scoreBoard() {
-  finalScore;
 }
