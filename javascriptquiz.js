@@ -174,9 +174,12 @@ function endQuiz() {
   submitScore();
 }
 
+// where the scores will be given
 function submitScore() {
+  // on the click of the submit button...
   submit.addEventListener("click", function () {
     event.preventDefault();
+    // scores will be stored on local storage
     var storedScores = localStorage.getItem("quizResults");
     var quizResultsArray;
 
@@ -191,12 +194,16 @@ function submitScore() {
       highscore: secondsLeft + 4,
     };
 
+    // push the results from the array of scores
     quizResultsArray.push(thisQuizResult);
+    // turn it into a JSON string
     localStorage.setItem("QuizResults", JSON.stringify(quizResultsArray));
 
+    // for Loop
     for (var i = 0; i < quizResultsArray.length; i++) {
       var scoreboard = document.createElement("ul");
 
+      // the scores do not show up on the page. You will have to find it on the console
       var playerName = document.createElement("li");
       playerName.textContent = quizResultsArray[i].name;
       scoreboard.appendChild(playerName);
