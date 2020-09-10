@@ -1,11 +1,12 @@
 p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center !important;
 }
 
-#intro-words {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+label input {
   text-align: center;
 }
+
 .highscore {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #17a2b8;
@@ -21,6 +22,11 @@ p {
   width: 100%;
 }
 
+#intro-words {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
 #timer {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #17a2b8;
@@ -34,9 +40,6 @@ p {
   text-align: center;
 }
 #start-btn {
-  /* background-color: rgb(115, 48, 177);
-  color: white;
-  border-radius: 4px; */
   margin: 0;
   position: absolute;
   left: 47%;
@@ -47,12 +50,18 @@ p {
   text-align: center;
 }
 
+#question {
+  font-size: 30px;
+  color: #17a2b8;
+}
+
+#answers {
+  font-size: 30px;
+  color: #17a2b8;
+}
+
 #answer1 #answer2 #answer3 #answer4 {
   background-color: #17a2b8;
   color: white;
   border-radius: 4px;
-}
-
-label input {
-  text-align: center;
 }

@@ -171,40 +171,41 @@ function endQuiz() {
   document.body.appendChild(h1);
   document.body.appendChild(pTag);
   score.classList.remove("hide");
+  submitScore();
 }
 
 function submitScore() {
-  event.preventDefault();
-  var storedScores = localStorage.getItem("quizResults");
-  var quizResultsArray;
+  submit.addEventListener("click", function () {
+    event.preventDefault();
+    var storedScores = localStorage.getItem("quizResults");
+    var quizResultsArray;
 
-  if (storedScores === null) {
-    quizResultsArray = [];
-  } else {
-    quizResultsArray = JSON.parse(storedScores);
-  }
+    if (storedScores === null) {
+      quizResultsArray = [];
+    } else {
+      quizResultsArray = JSON.parse(storedScores);
+    }
 
-  var thisQuizResult = {
-    name: nameInput.Value,
-    highscore: secondsLeft,
-  };
+    var thisQuizResult = {
+      name: nameInput.value,
+      highscore: secondsLeft + 4,
+    };
 
-  quizResultsArray.push(thisQuizResult);
-  localStorage.setItem("QuizResults", JSON.stringify(quizResultsArray));
+    quizResultsArray.push(thisQuizResult);
+    localStorage.setItem("QuizResults", JSON.stringify(quizResultsArray));
 
-  for (var i = 0; i < quizResultsArray.length; i++) {
-    var scoreboard = document.createElement("ul");
+    for (var i = 0; i < quizResultsArray.length; i++) {
+      var scoreboard = document.createElement("ul");
 
-    var playerName = document.createElement("li");
-    playerName.setAttribute("style", "text-align: center");
-    playerName.textContent = quizResultsArray[i].name;
-    scoreboard.appendChild(playerName);
-    console.log(playerName);
+      var playerName = document.createElement("li");
+      playerName.textContent = quizResultsArray[i].name;
+      scoreboard.appendChild(playerName);
+      console.log(playerName);
 
-    var playerScore = document.createElement("li");
-    playerScore.setAttribute("style", "text-align: center");
-    playerScore.textContent = quizResultsArray[i].highscore;
-    scoreboard.appendChild = quizResultsArray(playerScore);
-    console.log(playerScore);
-  }
+      var playerScore = document.createElement("li");
+      playerScore.textContent = quizResultsArray[i].highscore;
+      scoreboard.appendChild = quizResultsArray.playerScore;
+      console.log(playerScore);
+    }
+  });
 }
