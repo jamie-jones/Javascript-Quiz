@@ -4,7 +4,6 @@ var countdown = document.getElementById("timer");
 var startPage = document.getElementById("start");
 var h1 = document.querySelector("h1");
 var pTag = document.querySelector("p");
-var form = document.querySelector("form");
 var startButton = document.getElementById("start-btn");
 var questionContainer = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
@@ -17,6 +16,7 @@ var highScore = document.getElementById("end-score");
 var endQuizPage = document.getElementById("all-done");
 var submit = document.getElementById("submit-btn");
 var nameInput = document.getElementById("name-input");
+var score = document.getElementById("score");
 
 // Values for starting seconds and questions
 var secondsLeft = 75;
@@ -170,4 +170,41 @@ function endQuiz() {
   pTag.setAttribute("style", "text-align: center");
   document.body.appendChild(h1);
   document.body.appendChild(pTag);
+  score.classList.remove("hide");
+}
+
+function submitScore() {
+  event.preventDefault();
+  var storedScores = localStorage.getItem("quizResults");
+  var quizResultsArray;
+
+  if (storedScores === null) {
+    quizResultsArray = [];
+  } else {
+    quizResultsArray = JSON.parse(storedScores);
+  }
+
+  var thisQuizResult = {
+    name: nameInput.Value,
+    highscore: secondsLeft,
+  };
+
+  quizResultsArray.push(thisQuizResult);
+  localStorage.setItem("QuizResults", JSON.stringify(quizResultsArray));
+
+  for (var i = 0; i < quizResultsArray.length; i++) {
+    var scoreboard = document.createElement("ul");
+
+    var playerName = document.createElement("li");
+    playerName.setAttribute("style", "text-align: center");
+    playerName.textContent = quizResultsArray[i].name;
+    scoreboard.appendChild(playerName);
+    console.log(playerName);
+
+    var playerScore = document.createElement("li");
+    playerScore.setAttribute("style", "text-align: center");
+    playerScore.textContent = quizResultsArray[i].highscore;
+    scoreboard.appendChild = quizResultsArray(playerScore);
+    console.log(playerScore);
+  }
 }
