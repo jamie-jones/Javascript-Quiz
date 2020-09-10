@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=riDzcEQbX6k&list=WL&index=2&t=0s
 
 ## Layout
 
-Official Quiz:
+Official Quiz: https://jamjon94.github.io/Javascript-Quiz/
 
 Take a look at what you'll see!
 
