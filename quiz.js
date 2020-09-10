@@ -8,10 +8,10 @@ var startButton = document.getElementById("start-btn");
 var questionContainer = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var answerEl = document.getElementById("answers");
-var answerOp1 = document.getElementById("answer1");
-var answerOp2 = document.getElementById("answer2");
-var answerOp3 = document.getElementById("answer3");
-var answerOp4 = document.getElementById("answer4");
+var answer1 = document.getElementById("answer1");
+var answer2 = document.getElementById("answer2");
+var answer3 = document.getElementById("answer3");
+var answer4 = document.getElementById("answer4");
 var highScore = document.getElementById("end-score");
 var endQuizPage = document.getElementById("all-done");
 // start page
@@ -82,6 +82,10 @@ var questions = [
   },
 ];
 
+// function questionClick() {
+//   a
+// }
+
 // question 1
 function firstQuestion() {
   startPage.classList.add("hide");
@@ -95,7 +99,7 @@ function firstQuestion() {
   answer3.textContent = questions[0].answer3;
   answer4.textContent = questions[0].answer4;
 
-  answerOp1.addEventListener("click", function () {
+  answer1.addEventListener("click", function () {
     secondsLeft = secondsLeft - 10;
     secondQuestion();
   });
@@ -119,7 +123,7 @@ function secondQuestion() {
   answer2.textContent = questions[1].answer2;
   answer3.textContent = questions[1].answer3;
   answer4.textContent = questions[1].answer4;
-  clearInterval(timerInterval);
+  // clearInterval(timerInterval);
   answer1.addEventListener("click", function () {
     secondsLeft = secondsLeft - 10;
     thirdQuestion();
@@ -143,7 +147,6 @@ function thirdQuestion() {
   answer2.textContent = questions[2].answer2;
   answer3.textContent = questions[2].answer3;
   answer4.textContent = questions[2].answer4;
-  clearInterval(timerInterval);
   answer1.addEventListener("click", function () {
     secondsLeft = secondsLeft - 10;
     fourthQuestion();
@@ -168,23 +171,22 @@ function fourthQuestion() {
   answer2.textContent = questions[3].answer2;
   answer3.textContent = questions[3].answer3;
   answer4.textContent = questions[3].answer4;
-  clearInterval(timerInterval);
-  answer1.addEventListener("click", function () {
-    secondsLeft = secondsLeft - 10;
-    fifthQuestion();
-  });
-  answer2.addEventListener("click", function () {
-    secondsLeft = secondsLeft - 10;
-    fifthQuestion();
-  });
-  answer3.addEventListener("click", function () {
-    fifthQuestion();
-  });
-  answer4.addEventListener("click", function () {
-    secondsLeft = secondsLeft - 10;
-    fifthQuestion();
-  });
+  // clearInterval(timerInterval);
+  // answer1.addEventListener("click", function () {
+  secondsLeft = secondsLeft - 10;
+  fifthQuestion();
 }
+answer2.addEventListener("click", function () {
+  secondsLeft = secondsLeft - 10;
+  fifthQuestion();
+});
+answer3.addEventListener("click", function () {
+  fifthQuestion();
+});
+answer4.addEventListener("click", function () {
+  secondsLeft = secondsLeft - 10;
+  fifthQuestion();
+});
 
 // question 5
 function fifthQuestion() {
@@ -193,7 +195,7 @@ function fifthQuestion() {
   answer2.textContent = questions[4].answer2;
   answer3.textContent = questions[4].answer3;
   answer4.textContent = questions[4].answer4;
-  clearInterval(timerInterval);
+  // clearInterval(timerInterval);
   answer1.addEventListener("click", function () {
     secondsLeft = secondsLeft - 10;
     endQuiz();

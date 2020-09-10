@@ -11,44 +11,105 @@
     <title>Javascript Quiz</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav>
-      <h4 class="highscore">View Highscores</h4>
-      <h4><span id="timer">75</span></h4>
-    </nav>
-    <main id="start">
-      <h1 id="intro-words">Coding Quiz Challenge</h1>
-      <p id="instructions">
-        Try to answer the following code-related questions withing the time
-        <br />limit. Keep in mind that incorrect answers will penalize your
-        score time <br />
-        by ten seconds!
-      </p>
-      <div class="controls"></div>
-        <!-- <button id="start-btn">Start Quiz</button> -->
-        <button type="button" class="btn btn-outline-info" id="start-btn">Start Quiz</button>
-      </div>
-    </main>
-    <div id="question-container" class="hide">
-      <div id="question">Question goes here</div>
-      <div id="answers" class="hide">
-        <!-- <button id="answer1">Answer 1</button> -->
-        <button type="button" class="btn btn-outline-info" id="answer1">Answer</button>
-        <!-- <button id="answer2">Answer 2</button> -->
-        <button type="button" class="btn btn-outline-info" id="answer2">Start Quiz</button>
-        <!-- <button id="answer3">Answer 3</button> -->
-        <button type="button" class="btn btn-outline-info" id="answer3">Start Quiz</button>
-        <!-- <button id="answer4">Answer 4</button> -->
-        <button type="button" class="btn btn-outline-info" id="answer4">Start Quiz</button>
-      </div>
-    </div>
-    <div id="score" class="hide">
-      <div id="all-done"></div>
-      <div id="end-score"></div>
-    </div>
-    <script src="./quiz.js"></script>
+    <container>
+      <nav>
+        <h4 class="highscore">View Highscores</h4>
+        <h4><span id="timer">75</span></h4>
+      </nav>
+      <main class="jumbotron" id="start">
+        <h1 class="display-4" id="intro-words">Coding Quiz Challenge!</h1>
+        <hr class="my-4" id="instructions intro" />
+        <p>
+          Try to answer the following code-related questions withing the time
+          <br />limit. Keep in mind that incorrect answers will penalize your
+          score time <br />
+          by ten seconds!
+        </p>
+        <button type="button" class="btn btn-outline-info" id="start-btn">
+          Start Quiz
+        </button>
+      </main>
+      <section id="question-container" class="hide">
+        <div id="question">Question goes here</div>
+        <div id="answers" class="hide">
+          <!-- <button id="answer1">Answer 1</button> -->
+          <button type="button" class="btn btn-outline-info" id="answer1">
+            Answer
+          </button>
+          <!-- <button id="answer2">Answer 2</button> -->
+          <button type="button" class="btn btn-outline-info" id="answer2">
+            Start Quiz
+          </button>
+          <!-- <button id="answer3">Answer 3</button> -->
+          <button type="button" class="btn btn-outline-info" id="answer3">
+            Start Quiz
+          </button>
+          <!-- <button id="answer4">Answer 4</button> -->
+          <button type="button" class="btn btn-outline-info" id="answer4">
+            Start Quiz
+          </button>
+        </div>
+      </section>
+      <!-- <section class="jumbotron jumbotron-fluid hide" id="score">
+        <div class="container" id="all-done">
+          <div class="display-4">All Done!!</div>
+          <div id="end-score">Your final score is:</div>
+          <form>
+            <div class="row" align="center">
+              <div class="col-sm-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First name"
+                />
+              </div>
+              <button type="button" class="btn btn-outline-info">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section> -->
+      <section id="score" class="hide">
+        <div id="all-done"></div>
+        <div id="end-score"></div>
+        <form>
+          <div class="row" align="center">
+            <div class="col-sm-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First name"
+              />
+            </div>
+            <button type="button" class="btn btn-outline-info" id="submit-btn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </container>
+    <script src="./javascriptquiz.js"></script>
   </body>
 </html>
+
+<!-- <main id="start">
+        <h1 id="intro-words">Coding Quiz Challenge</h1>
+        <p id="instructions">
+          Try to answer the following code-related questions withing the time
+          <br />limit. Keep in mind that incorrect answers will penalize your
+          score time <br />
+          by ten seconds!
+        </p>
+        <div class="controls"></div>
+          <button id="start-btn">Start Quiz</button>
+          <button type="button" class="btn btn-outline-info" id="start-btn">Start Quiz</button>
+        </div>
+      </main> -->
