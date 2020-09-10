@@ -8,7 +8,9 @@ As I made this quiz, I went through so many emotions. Confusion, anger, sadness,
 
 A big thank you to one of my fellow classmates, Jonathan Canales for allowing me to use his rendition of the quiz as a reference so I could figure out what I needed to do for parts of this code!
 
-Along with his code, I also followed a tutorial on YouTube by Web Dev Simplified, which helped me work through other struggles. Here's a link to his video!:
+Thank you as well to Jude Clark, another one of my classmates for her help with my local storage. Though, it may not be perfect, I did get my score to show up!
+
+Along with their codes, I also followed a tutorial on YouTube by Web Dev Simplified, which helped me work through other struggles. Here's a link to his video!:
 
 https://www.youtube.com/watch?v=riDzcEQbX6k&list=WL&index=2&t=0s
 
